@@ -150,14 +150,23 @@ rules(24, 1,[you,M,you,Y|_],[
 		member(M,[feel,think,believe,wish]).
 
 rules(25, 1,[youre|Res],[
+		['I',am,sorry,to,hear,that,you,are,depressed,.],
+		[do,you,think,that,it,is,too,hard,for,you,to,handle,?],
+		[you,might,want,to,go,see,a,professional,.],
+		['I',think,a,professional,will,know,how,to,help,you,.],
+		[be,strong,and,stay,healthy,.]]):-
+		member(M,Res),
+		member(M,[depressed,depressing,suicidal,miserable,sorrowful,melancholy]).
+
+rules(26, 1,[youre|Res],[
 		['I',am,sorry,to,hear,you,are,M,.],
 		[do,you,think,coming,here,will,help,you,not,to,be,M,?],
 		['I',am,sure,it,is,not,pleasant,to,be,M,.],
 		[can,you,explain,what,made,you,M,?]]):-
 		member(M,Res),
-		member(M,[sad,unhappy,depressed,sick]).
+		member(M,[sad,unhappy,sick]).
 
-rules(26, 1,[youre|Res],[
+rules(27, 1,[youre|Res],[
 		[how,have,'I',helped,you,to,be,M,?],
 		[has,your,treatment,made,you,M,?],
 		[what,makes,you,M,just,now,?],
@@ -165,19 +174,19 @@ rules(26, 1,[youre|Res],[
 		member(M,Res),
 		member(M,[happy,elated,glad,better]).
 
-rules(27, 1,[youre|Y],[
+rules(28, 1,[youre|Y],[
 		[is,it,because,you,are,Y,that,you,came,to,me,?],
 		[how,long,have,you,been,Y,?],
 		[do,you,believe,it,normal,to,be,Y,?],
 		[do,you,enjoy,being,Y,?]]).
 
-rules(28, 0,[im|Y],[
+rules(29, 0,[im|Y],[
 		[what,makes,you,think,'I',am,Y,?],
 		[does,it,please,you,to,believe,'I',am,Y,?],
 		[do,you,sometimes,wish,you,were,Y,?],
 		[perhaps,you,would,like,to,be,Y,?]]).
 
-rules(29, 0,[i,Y,you|_],[
+rules(30, 0,[i,Y,you|_],[
 		[why,do,you,think,'I',Y,you,?],
 		[you,like,to,think,'I',Y,you,',',do,you,not,?],
 		[what,makes,you,think,'I',Y,you,?],
@@ -186,47 +195,47 @@ rules(29, 0,[i,Y,you|_],[
 		[suppose,'I',did,Y,you,',',what,would,that,mean,to,you,?],
 		[does,someone,else,believe,'I',Y,you,?]]).
 
-rules(30, 0,[i|Y],[
+rules(31, 0,[i|Y],[
 		[what,are,your,feelings,now,?],
 		[we,were,discussing,you,',',not,me,.],
 		[oh,',',i,Y,.],
 		[you,are,not,really,talking,about,me,',',are,you,?]]).
 
-rules(31, 0,[yes|_],[
+rules(32, 0,[yes|_],[
 		[i,see,.],
 		[i,understand,.],
 		[you,are,sure,?],
 		[you,seem,quite,positive,.]]).
 
-rules(32, 0,[no|_],[
+rules(33, 0,[no|_],[
 		[why,not,?],
 		[why,no,?],
 		[are,you,saying,no,just,to,be,negative,?],
 		[you,are,being,a,bit,negative,.]]).
 
-rules(33, 2,[your,M,Z|_],[
+rules(34, 2,[your,M,Z|_],[
 		[tell,me,more,about,your,family,.],
 		[who,else,in,your,family,Z,?],
 		[your,M,?],
 		[what,else,comes,to,mind,when,you,think,of,your,M,?]]):-
 		member(M,[mother,father,brother,sister,children,wife]).
 
-rules(34, 2,[your|Y],[
+rules(35, 2,[your|Y],[
 		[your,Y,?],
 		[why,do,you,say,your,Y,?],
 		[does,that,suggest,anything,else,which,belongs,to,you,?],
 		[is,it,important,to,you,that,your,Y,?]]).
 
-rules(35, 0,[can,i|Y],[
+rules(36, 0,[can,i|Y],[
 		[you,believe,'I',can,Y,',',do,you,not,?],
 		[you,want,me,to,be,able,to,Y,?],
 		[perhaps,you,would,like,to,be,able,to,Y,yourself,?]]).
 
-rules(36, 0,[can,you|Y],[
+rules(37, 0,[can,you|Y],[
 		[do,you,want,to,be,able,to,Y,?],
 		[whether,or,not,you,can,Y,depends,on,you,more,than,on,me,.]]).
 
-rules(37, 0,[what|_],[
+rules(38, 0,[what|_],[
 		[what,do,you,mean,?],
 		[why,do,you,ask,?],
 		[does,that,question,interest,you,?],
@@ -237,25 +246,25 @@ rules(37, 0,[what|_],[
 		[what,comes,to,your,mind,when,you,ask,that,?],
 		[have,you,asked,such,questions,before,?]]).
 
-rules(38, 0,[because|_],[
+rules(39, 0,[because|_],[
 		[is,that,the,real,reason,?],
 		[do,any,other,reasons,not,come,to,mind,?],
 		[does,that,reason,seem,to,explain,anything,else,?],
 		[what,other,reasons,might,there,be,?]]).
 
-rules(39, 0,[why,dont,i|Y],[
+rules(40, 0,[why,dont,i|Y],[
 		[do,you,believe,'I',do,not,Y,?],
 		[perhaps,'I',will,Y,in,good,time,.],
 		[should,you,Y,yourself,?],
         [you,want,me,to,Y,?]]).
 
-rules(40, 0,[why,cant,you|Y],[
+rules(41, 0,[why,cant,you|Y],[
 		[do,you,think,you,should,be,able,to,Y,?],
 		[do,you,want,to,be,able,to,Y,?],
 		[do,you,believe,this,will,help,you,to,Y,?],
         [have,you,any,idea,why,you,can,not,Y,?]]).
 
-rules(41, 0,[M|_],[
+rules(42, 0,[M|_],[
 		[really,',',M,?],
 		[surely,not,M,?],
 		[can,you,think,of,anyone,in,particular,?],
@@ -267,13 +276,13 @@ rules(41, 0,[M|_],[
 		[who,do,you,think,you,are,talking,about,?]]):-
 		member(M,[everyone,everybody,nobody,noone]).
 
-rules(42, 1,[always|_],[
+rules(43, 1,[always|_],[
 		[can,you,think,of,a,specific,example,?],
 		[when,?],
 		[what,incident,are,you,thinking,of,?],
 		[really,',',always,?]]).
 
-rules(43, 10,[dit|_],[
+rules(44, 10,[dit|_],[
 		[in,what,way,?],
 		[why,do,you,think,so,?],
 		[what,does,that,suggest,to,you,?],
@@ -283,7 +292,7 @@ rules(43, 10,[dit|_],[
 		[what,is,the,connection,',',do,you,suppose,?],
 		[how,?]]).
 
-rules(44, 100,[quit|_],[
+rules(45, 100,[quit|_],[
 		[goodbye,.,'I',hope,you,will,have,a,good,day,.]]).
 
 rules(ID, Score,[im|X],R):-rules(ID, Score,[i|X],R),!.
